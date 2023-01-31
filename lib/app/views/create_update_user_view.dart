@@ -5,14 +5,16 @@ import 'package:graphql_crud/app/services/create_user.dart';
 import 'package:graphql_crud/app/services/get_user.dart';
 import 'package:graphql_crud/app/services/update_user.dart';
 
-class CreateUserView extends StatefulWidget {
-  const CreateUserView({super.key});
+class CreateUpdateUserView extends StatefulWidget {
+  static const routeName = "/createOrUpdate";
+
+  const CreateUpdateUserView({super.key});
 
   @override
-  State<CreateUserView> createState() => _CreateUserViewState();
+  State<CreateUpdateUserView> createState() => _CreateUpdateUserViewState();
 }
 
-class _CreateUserViewState extends State<CreateUserView> {
+class _CreateUpdateUserViewState extends State<CreateUpdateUserView> {
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
   final _jobController = TextEditingController();
