@@ -28,7 +28,7 @@ class _CreateUpdateUserViewState extends State<CreateUpdateUserView> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      _userId = ModalRoute.of(context)?.settings.arguments as String;
+      _userId = ModalRoute.of(context)?.settings.arguments as String?;
       if (_userId != null) {
         loadData(_userId ?? '');
       }
